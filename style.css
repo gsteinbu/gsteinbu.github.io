@@ -1,0 +1,169 @@
+
+/* Genral elements */
+
+/* For color sheme */
+/* https://colorswall.com/  Shades of gray, colorswall */
+:root {
+  --main-col: #a9a9a9; /*  REMEBER TO CHANGE TRAIN SVG*/
+  --main-col-lighter: #d3d3d3;
+  --main-col-darker: #808080;
+}
+
+body {
+ padding: 0;
+ margin: 0;
+ font-family: 'Arial', sans-serif;
+ font-size: 22px;
+ background-color: 'white';
+}
+
+/* Header ################################################################### */
+
+.full-headbar {
+  background-color: var(--main-col);
+}
+.head-container {
+   height: 70px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: auto;
+   max-width: 1600px;
+}
+.head-navbar {
+  display: flex;
+}
+.navbtns {
+  height: 70px;
+  border: none;
+  font-size: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--main-col);
+  color: white;
+}
+.navbtns:hover {
+  background-color: var(--main-col-lighter);
+}
+button[disabled=disabled], button:disabled {
+    color: white;
+    background-color: var(--main-col-lighter);
+}
+.headtitle {
+  padding-left: 20px;
+  font-size: 35px;
+  color: white;
+
+}
+.headsymbol {
+  padding-right: 20px;
+}
+
+/* Train #################################################################### */
+
+.train {
+  overflow: hidden;
+  display: none;
+  margin:0px
+}
+.train-svg {
+  padding-left: 100%;
+  animation: move 10s ease-in-out infinite;
+  animation-direction: alternate;
+  display: block;
+}
+@keyframes move{
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.trainbtn {
+  background-color: var(--main-col);
+  color: white;
+  margin-top:30px;
+  margin-bottom:30px;
+  margin-left: 10%;
+  width: 80%;
+  height:40px;
+  border: none;
+  font-size: 20px;
+}
+.trainbtn:hover {
+  background-color: var(--main-col-lighter);
+}
+
+/* Content ################################################################## */
+
+.content {
+  margin: auto;
+  max-width: 1200px;
+  padding: 5%;
+}
+.content-head {
+  display: flex;
+  justify-content: space-between;
+}
+.content-headline {
+  margin-top: 170px;
+  max-width: 600px;
+}
+.content-headline h1 {
+  font-size: 58px;
+  margin-bottom: -25px;
+  font-weight: normal;
+}
+.content-headline p {
+  font-size: 27px;
+}
+.me {
+    margin-left: -400px;
+}
+.content-body {
+  margin-top: 5px;
+  border-top: solid 2px;
+  border-color: var(--main-col);
+  display: flex;
+  justify-content: center;
+}
+.about-text {
+  text-align: justify;
+}
+.privacy-text {
+  text-align: left;
+  width: 100%;
+}
+
+/* RESPONSIVE ############################################################### */
+
+@media (max-width: 950px) {
+    .me {
+        display: none;
+    }
+    .content-headline {
+      margin-top: -25px;
+      margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 580px) {
+  .headtitle {
+    font-size: 30px;
+  }
+  .content-headline h1 {
+    font-size: 43px;
+    margin-bottom: -25px;
+    font-weight: bold;
+  }
+  .content-headline p {
+    font-size: 22px;
+  }
+}
